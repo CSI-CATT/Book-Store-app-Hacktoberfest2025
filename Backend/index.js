@@ -14,9 +14,10 @@ const PORT = process.env.PORT || 4000;
 // Enable CORS middleware before defining routes
 
 app.use(cors({
-    origin: ["https://book-store-app-frontend-nine.vercel.app"], // Update the correct frontend URL here
+    origin: ["https://book-store-app-frontend-beige.vercel.app"], // Update the correct frontend URL here
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"], 
 }));
 
 app.use(express.json());
