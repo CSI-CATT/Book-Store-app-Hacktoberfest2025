@@ -18,7 +18,7 @@ function Signup() {
         };
 
         try {
-            const res = await axios.post("https://book-store-app-lemon.vercel.app/user/signup", userinfo);
+            const res = await axios.post("https://book-store-app-snowy-six.vercel.app/?vercelToolbarCode=gKhW4j1JcsQrADx/user/signup", userinfo);
             console.log(res.data);
             if (res.data) {
                 toast.success('Signup Succesfully:)');
