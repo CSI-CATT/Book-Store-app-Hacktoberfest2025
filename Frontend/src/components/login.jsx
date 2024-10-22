@@ -19,7 +19,7 @@ function login() {
         };
 
         try {
-            const res = await axios.post("/user/login", userinfo);
+            const res = await axios.post("https://book-store-app-lemon.vercel.app/user/login", userinfo);
             console.log(res.data);
             if (res.data) {
                 toast.success('LoggedIn Succesfully:)'),
