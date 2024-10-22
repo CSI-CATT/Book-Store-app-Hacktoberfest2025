@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4000;
 // Enable CORS middleware before defining routes
 app.use(cors(
     {
-        origin :["https://deploy-mern-1whq.vercel.app"],
+        origin :["https://book-store-app-frontend-nine.vercel.app"],
         methods :["GET", "POST"],
         credentials :true
     }
