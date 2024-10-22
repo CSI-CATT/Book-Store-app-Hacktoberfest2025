@@ -12,13 +12,11 @@ const URI = process.env.MongoDBURI;
 const PORT = process.env.PORT || 4000;
 
 // Enable CORS middleware before defining routes
-app.use(cors(
-    {
-        origin :["https://deploy-mern-1whq.vercel.app"],
-        methods :["GET", "POST"],
-        credentials :true
-    }
-));
+app.use(cors({
+    origin: ["https://book-store-app-frontend-nine.vercel.app"], // Update the correct frontend URL here
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 app.use(express.json());
 
 // Connection to MongoDB
