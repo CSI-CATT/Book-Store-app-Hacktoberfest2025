@@ -27,8 +27,8 @@ mongoose.connect(URI)
   .catch((error) => console.log('Error:', error));
 
 // Defining routes
-app.use("https://book-store-app-lemon.vercel.app/book", bookRoute);
-app.use("https://book-store-app-lemon.vercel.app/user", userRoute);
+app.use("/book", bookRoute);
+app.use("/user", userRoute);
 
 // Deployment for production
 if (process.env.NODE_ENV === 'production') {
