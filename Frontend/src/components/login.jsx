@@ -10,14 +10,14 @@ function login() {
         handleSubmit,
 
         formState: { errors },
-    } = useForm()
+    } = useForm();
     const onSubmit = async (data) => {
         const userinfo = {
 
             email: data.email,
             password: data.password,
         };
-
+        axios.defaults.withCredentials=true;
         try {
             const res = await axios.post("https://book-store-app-lemon.vercel.app/user/login", userinfo);
             console.log(res.data);

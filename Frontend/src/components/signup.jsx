@@ -9,7 +9,7 @@ function Signup() {
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || "/";
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    axios.defaults.withCredentials=true;
     const onSubmit = async (data) => {
         const userinfo = {
             fullname: data.fullname,
@@ -18,7 +18,7 @@ function Signup() {
         };
 
         try {
-            const res = await axios.post("https://book-store-app-lemon.vercel.app/user/signup", userinfo);
+            const res = await axios.post("/user/signup", userinfo);
             console.log(res.data);
             if (res.data) {
                 toast.success('Signup Succesfully:)');

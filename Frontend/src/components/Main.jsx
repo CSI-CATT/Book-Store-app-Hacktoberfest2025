@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom';
 
 function Main() {
+  axios.defaults.withCredentials=true;
   const [book, setBook] = useState([])
   useEffect(() => {
     const getBook = async () => {
