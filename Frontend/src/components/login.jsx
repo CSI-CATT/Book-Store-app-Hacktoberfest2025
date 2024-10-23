@@ -67,7 +67,7 @@ function login() {
                         </div>
                         <div className='flex justify-between'><button className='mt-5 border-2 border-black font-serif font-bold rounded-md cursor-pointer hover:bg-green-500 duration-200 py-1 px-2 text-black dark:text-white dark:border-white'>Login
                         </button>
-                            <p className='mt-7'>Not registered? <Link to={"/signup"} className='underline text-blue-500'>signup</Link></p>
+                            <p className='mt-7 '>Not registered? <Link to={"/signup"} className='underline text-blue-500'>signup</Link></p>
                         </div>
                     </form>
                 </div>

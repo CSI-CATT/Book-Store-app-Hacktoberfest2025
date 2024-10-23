@@ -9,7 +9,7 @@ function Signup() {
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || "/";
     const { register, handleSubmit, formState: { errors } } = useForm();
-    axios.defaults.withCredentials=true;
+    axios.defaults.withCredentials = true;
     const onSubmit = async (data) => {
         const userinfo = {
             fullname: data.fullname,
@@ -34,9 +34,9 @@ function Signup() {
 
     return (
         <div>
-            <div id="my_modal_3" className="flex h-screen justify-center items-center">
-                <form onSubmit={handleSubmit(onSubmit)} >
-                    <div className='modal-box px-20 bg-white text-black dark:bg-slate-900 dark:text-white dark:border-white border-black '>
+            <div id="my_modal_3" className="min-h-screen flex items-center justify-center ">
+                <form onSubmit={handleSubmit(onSubmit)} className='pt-5 md:pt-5'>
+                    <div className='modal-box pt-14 pr-11 pl-12 md:p-16 bg-white text-black dark:bg-slate-900 dark:text-white dark:border-white border-black '>
                         <Link
                             to="/"
                             className="btn btn-sm btn-circle btn-ghost border-black dark:border-white absolute right-2 top-2"
