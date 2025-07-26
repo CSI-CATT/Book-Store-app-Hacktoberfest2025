@@ -17,15 +17,15 @@ app.use(cors({
     origin: ["https://book-store-app-frontend-beige.vercel.app"], // Update the correct frontend URL here
     methods: ["GET", "POST"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"], 
+    allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 app.use(express.json());
 
 // Connection to MongoDB
 mongoose.connect(URI)
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((error) => console.log('Error:', error));
+    .then(() => console.log('Connected to MongoDB'))
+    .catch((error) => console.log('Error:', error));
 
 // Defining routes
 app.use("/book", bookRoute);
