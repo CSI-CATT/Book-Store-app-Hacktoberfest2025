@@ -84,7 +84,7 @@ function Footer() {
 
                 </nav>
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - Made By Aditya</p>
+                    <p>Copyright © {new Date().getFullYear()} - Hacktoberfest 2025</p>
                 </aside>
             </footer>
         </div>
