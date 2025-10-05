@@ -40,7 +40,7 @@ The **Book Store Application** is a modern full-stack web app that enables users
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/book-store-app.git
+git clone https://github.com/CSI-CATT/Book-Store-app-Hacktoberfest2025.git
 ```
 
 ### 2️⃣ Navigate to the Project Directory
