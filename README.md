@@ -1,5 +1,6 @@
 # Book Store Application
 
+Maintainer => Sanika salunkhe
 ## Overview
 The **Book Store Application** is a modern full-stack web application that allows users to browse and purchase books with ease. Utilizing a responsive design, the application offers a seamless user experience on any device.
 
