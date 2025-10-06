@@ -1,94 +1,128 @@
-import React from 'react'
+import React from "react";
+
+const socials = [
+  {
+    name: "GitHub",
+    href: "https://github.com/Aditya-jambhale",
+    color: "hover:bg-[#181717]",
+    svg: (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        aria-hidden="true"
+      >
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.755-1.333-1.755-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.805 1.304 3.49.997.108-.774.42-1.305.763-1.605-2.665-.304-5.466-1.335-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23A11.52 11.52 0 0112 5.8c1.02.004 2.045.138 3.003.404 2.29-1.552 3.293-1.23 3.293-1.23.653 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.815 1.103.815 2.222 0 1.606-.015 2.9-.015 3.292 0 .32.217.694.825.576C20.565 21.796 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/_.adityeahhh",
+    color: "hover:bg-[#E1306C]",
+    svg: (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        aria-hidden="true"
+      >
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.5a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+      </svg>
+    ),
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/adityajambhale",
+    color: "hover:bg-[#0077B5]",
+    svg: (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        aria-hidden="true"
+      >
+        <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.11 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.8v2.3h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V24h-5v-6.8c0-1.62-.03-3.7-2.26-3.7-2.27 0-2.62 1.77-2.62 3.6V24h-5V8z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Twitter",
+    href: "https://x.com/AdityaJambhal18",
+    color: "hover:bg-[#1DA1F2]",
+    svg: (
+      <svg
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        className="w-6 h-6"
+        aria-hidden="true"
+      >
+        <path d="M24 4.557a9.94 9.94 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.95.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.384 4.482c-4.083-.2-7.702-2.16-10.126-5.13a4.822 4.822 0 00-.664 2.475c0 1.708.87 3.214 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.918 4.918 0 003.946 4.814 4.996 4.996 0 01-2.224.084 4.92 4.92 0 004.588 3.417A9.868 9.868 0 010 19.54a13.896 13.896 0 007.548 2.209c9.056 0 14.01-7.507 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z" />
+      </svg>
+    ),
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/918108765751",
+    color: "hover:bg-[#25D366]",
+    svg: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-6 h-6 transition-colors duration-300 group-hover:text-white"
+        aria-hidden="true"
+        shapeRendering="geometricPrecision"
+      >
+        <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.373 0 0 5.373 0 12c0 2.128.636 4.11 1.727 5.76L0 24l6.283-1.656A11.965 11.965 0 0012 24c6.627 0 12-5.373 12-12a11.94 11.94 0 00-3.48-8.52zM12 21.5a9.5 9.5 0 01-5.22-1.59l-.37-.25-3.73 1 1-3.64-.26-.38A9.5 9.5 0 1121.5 12c0 5.24-4.26 9.5-9.5 9.5zm5.32-7.17c-.29-.14-1.72-.85-1.98-.95-.26-.1-.44-.15-.63.15s-.73.92-.9 1.1c-.17.19-.33.22-.62.08a5.33 5.33 0 01-1.57-1.03 5.9 5.9 0 01-1.08-1.34c-.12-.21-.02-.33.09-.45.09-.1.22-.25.34-.37.12-.13.16-.22.26-.35.1-.14.05-.27 0-.38a.48.48 0 00-.58-.3c-.19 0-1.6.76-2.15 1.8a8.03 8.03 0 003.11 3.76c.43.18.76.14 1.04.09a1.65 1.65 0 001.22-1.02c.13-.28.2-.5.29-.72a.43.43 0 00-.07-.4z" />
+      </svg>
+    ),
+  },
+];
 
 function Footer() {
-    return (
-        <div>
-            <hr />
-            <footer className="footer footer-center   p-10 bg-slate-100 text-black dark:text-white dark:bg-slate-900">
-                <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover" href='/'>Home</a>
-                    <a className="link link-hover" href='/Main'>Course</a>
-                    <a className="link link-hover" href='/About'>About</a>
-                    <a className="link link-hover" href='/Contact'>Contact us</a>
-                </nav>
-                <nav>
-                    <div className="grid grid-flow-col gap-4">
-                        {/* GitHub */}
-                        <a href="https://github.com/Aditya-jambhale" target="_blank" rel="noopener noreferrer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M12 0c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.111.82-.261.82-.577v-2.167c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.774.418-1.305.76-1.605-2.665-.303-5.466-1.335-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.982-.399 3.003-.404 1.021.005 2.046.138 3.005.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.241 2.873.118 3.176.77.84 1.236 1.911 1.236 3.221 0 4.605-2.804 5.624-5.475 5.921.43.37.814 1.102.814 2.222v3.293c0 .319.216.694.824.576 4.765-1.588 8.201-6.085 8.201-11.387 0-6.627-5.373-12-12-12z"></path>
-                            </svg>
-                        </a>
+  return (
+    <footer className="bg-slate-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200 px-6 py-12 sm:px-12 md:px-20">
+      {/* Navigation */}
+      <nav
+        aria-label="Main navigation"
+        className="flex flex-wrap justify-center gap-6 mb-10 text-base font-semibold tracking-wide text-gray-700 dark:text-gray-300"
+      >
+        {["Home", "Course", "About", "Contact us"].map((item) => (
+          <a
+            key={item}
+            href={`/${item === "Home" ? "" : item.replace(/\s+/g, "")}`}
+            className="relative rounded px-3 py-1 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 transition-colors duration-300"
+          >
+            {item}
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 dark:bg-indigo-400 scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
+          </a>
+        ))}
+      </nav>
 
-                        {/* Instagram */}
-                        <a href="https://www.instagram.com/_.adityeahhh" target="_blank" rel="noopener noreferrer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.325 3.608 1.3.975.975 1.238 2.242 1.3 3.608.059 1.266.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.062 1.366-.325 2.633-1.3 3.608-.975.975-2.242 1.238-3.608 1.3-1.266.059-1.645.069-4.85.069s-3.584-.011-4.85-.069c-1.366-.062-2.633-.325-3.608-1.3-.975-.975-1.238-2.242-1.3-3.608C2.174 15.747 2.163 15.368 2.163 12s.011-3.584.069-4.85c.062-1.366.325-2.633 1.3-3.608.975-.975 2.242-1.238 3.608-1.3 1.266-.059 1.645-.069 4.85-.069zm0-2.163C8.756 0 8.332.015 7.052.072 5.765.13 4.596.372 3.596 1.372 2.597 2.371 2.354 3.54 2.297 4.828.014 6.272 0 8.756 0 12s.014 5.728.072 7.048c.058 1.286.299 2.454 1.3 3.454.999 1.001 2.168 1.242 3.455 1.3 1.319.058 3.803.072 7.047.072s5.728-.014 7.048-.072c1.286-.058 2.455-.299 3.455-1.3 1.001-.999 1.242-2.168 1.3-3.455.058-1.319.072-3.803.072-7.047s-.014-5.728-.072-7.048c-.058-1.286-.299-2.454-1.3-3.454C21.455.371 20.287.129 19.001.072 17.68.014 15.196 0 12 0z"></path>
-                                <path
-                                    d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"></path>
-                            </svg>
-                        </a>
+      {/* Social Icons */}
+      <div className="flex justify-center gap-6 flex-wrap mb-10">
+        {socials.map(({ name, href, color, svg }) => (
+          <a
+            key={name}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={name}
+            className={`group relative flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition shadow-sm hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${color} hover:text-white transform hover:scale-110 duration-300`}
+            title={name}
+          >
+            {svg}
+          </a>
+        ))}
+      </div>
 
-                        {/* LinkedIn */}
-                        <a href="https://www.linkedin.com/in/adityajambhale" target="_blank" rel="noopener noreferrer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
-                        </a>
-
-                        {/* Twitter */}
-                        <a href="https://x.com/AdityaJambhal18" target="_blank" rel="noopener noreferrer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                            </svg>
-                        </a>
-
-                        {/* WhatsApp */}
-                        <a href="https://wa.me/8108765751" target="_blank" rel="noopener noreferrer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current">
-                                <path
-                                    d="M20.52 3.48c-2.44-2.44-5.73-3.78-9.2-3.48-3.47.3-6.54 2.14-8.39 4.99-1.98 3.04-2.31 6.86-.89 10.16l-1.62 5.93c-.15.55.39 1.09.95.95l5.93-1.62c1.43.49 2.93.74 4.46.74 5.52 0 10-4.48 10-10 0-2.67-1.04-5.18-2.93-7.07zm-9.52 16.02c-1.39 0-2.76-.35-3.97-1.01-.18-.1-.4-.12-.6-.06l-3.93 1.07 1.06-3.93c.06-.2.03-.42-.07-.6-1.5-2.67-1.34-6.02.42-8.55 1.49-2.29 4.03-3.78 6.81-3.99 3.23-.26 6.26.94 8.19 3.16 1.8 1.8 2.79 4.19 2.79 6.72 0 5.24-4.27 9.5-9.5 9.5zm5.29-7.07l-.01-.01c-.27-.14-1.61-.79-1.86-.89-.24-.09-.41-.13-.58.13-.16.26-.67.89-.82 1.07-.15.18-.3.19-.56.06-.26-.13-1.08-.4-2.06-1.28-.76-.67-1.28-1.51-1.43-1.77-.15-.26-.02-.41.11-.53.11-.11.26-.3.39-.45.13-.16.17-.27.26-.45.09-.18.04-.34-.02-.48-.06-.13-.57-1.37-.79-1.9-.21-.51-.43-.44-.58-.44-.14 0-.31-.01-.47-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.12 0 1.26.9 2.48 1.02 2.65.13.18 1.75 2.67 4.25 3.74.59.25 1.05.4 1.41.51.59.19 1.12.16 1.55.1.47-.07 1.45-.59 1.66-1.16.2-.57.2-1.06.14-1.16-.07-.1-.23-.17-.48-.3z"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-
-                </nav>
-                <aside>
-                    <p>Copyright © {new Date().getFullYear()} - Hacktoberfest 2025</p>
-                </aside>
-            </footer>
-        </div>
-    )
+      {/* Footer Text */}
+      <p className="text-center text-sm text-gray-600 dark:text-gray-400 select-none">
+        © {new Date().getFullYear()} Aditya Jambhale. All rights reserved.
+      </p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
