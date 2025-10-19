@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const userSchema = mongoose.Schema({
     fullname: {
         type: String,
@@ -11,11 +12,9 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        unique: true,
         required: true,
-
     },
+});
 
-})
 const User = mongoose.model('User', userSchema);
 export default User;
