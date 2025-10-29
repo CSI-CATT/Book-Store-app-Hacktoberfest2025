@@ -23,7 +23,6 @@ function Signup() {
             if (res.data) {
                 toast.success('Signup Succesfully:)');
                 navigate(from, { replace: true });
-                window.location.reload();
             }
             localStorage.setItem("Users", JSON.stringify(res.data.user));
         } catch (error) {
